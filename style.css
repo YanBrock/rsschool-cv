@@ -58,6 +58,8 @@ header .container {
 	margin-bottom: 1rem;
 }
 
+
+
 .header_author-quote {
 	margin-bottom: 1rem;
 	font-style: italic;
@@ -70,25 +72,12 @@ header .container {
 
 .header_author-social .item {
 	height: 2rem;
-	width: 2rem;
+	
+	width: fit-content;
 	display: flex;
 }
 
-.header_author-social .item a {
-	height: 100%;
-	width: 100%;
-}
 
-#github {
-	background-image: url("/assets/images/github-sign.png");
-	background-size: cover;
-	margin-right: 1rem;
-}
-
-#linkedin {
-	background-image: url("/assets/images/linkedin.png");
-	background-size: cover;
-}
 
 main {
 	display: flex;
@@ -121,13 +110,102 @@ main {
 }
 
 footer {
-	height: 10vh;
-	background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 142, 142, 0.815), rgb(255, 57, 57));
+	display: inherit;
+	justify-content: center;	
 }
 
 footer .container {
-	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	text-transform: uppercase;	
+	background-color: rgb(226, 226, 226);
+	padding: .5rem;
+}
+
+footer .year {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.footer_author-social {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.footer_author-social .item a {
+	height: 100%;
+	width: 100%;
+}
+
+#github {
+	background-image: url("assets/images/github-sign.png");
+	background-size: cover;
+	width: 2rem;
+	height: 2rem;
+	margin-right: 1rem;
+}
+
+#rss {
+	background-image: url("assets/images/svg/rs_school_js.svg");
+	background-size: cover;
+	width: 5rem;
+	height: 2rem;
+}
+
+@media (max-width: 1300px) {
+	.header_author-name, .header_author-lname {
+		font-size: 2rem;
+	}
+
+	.info_title {
+		font-size: .7rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.header_author-name, .header_author-lname {
+		font-size: 1rem;
+	}
+
+	.info_title {
+		font-size: .7rem;
+	}
+
+	.info_list {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.header_author-name, .header_author-lname {
+		font-size: .7rem;
+		margin-bottom: .5rem;
+	}
+
+	header .container {
+		
+		flex-direction: column;
+		
+	}
+
+	.header_author, .header_avatar {
+		width: 100%;
+		margin: 0;
+	}
+
+	.header_avatar {
+		height: 60%;
+		margin-bottom: .5rem;
+	}
+
+	.header_author {
+		height: 40%;
+		display: flex;
+		align-items: center;
+	}
+
+	.header_author-quote {
+		font-size: 1rem;
+	}
 }
