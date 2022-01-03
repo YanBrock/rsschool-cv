@@ -1,0 +1,133 @@
+:root {
+	--line-color: rgb(219, 219, 219);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.container {
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	max-width: 1300px;
+
+	display: flex;
+	
+	padding: 1rem;
+}
+
+header {
+	height: 45vh;
+}
+
+header .container {
+	border-bottom: solid 1px var(--line-color);
+}
+
+.header_avatar {
+	width: 40%;
+	height: 100%;
+	background-image: url("/assets/images/Woody-Harrelson-as-Carnage-in-Venom.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px;
+	margin-right: 3rem;
+}
+
+.header_author {
+	width: 60%;
+	height: 100%;
+
+	display: inherit;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header_author-name, .header_author-lname {
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.header_author-quote {
+	margin-bottom: 1rem;
+	font-style: italic;
+	font-size: 20px;
+}
+
+.header_author-social {
+	display: flex;
+}
+
+.header_author-social .item {
+	height: 2rem;
+	width: 2rem;
+	display: flex;
+}
+
+.header_author-social .item a {
+	height: 100%;
+	width: 100%;
+}
+
+#github {
+	background-image: url("/assets/images/github-sign.png");
+	background-size: cover;
+	margin-right: 1rem;
+}
+
+#linkedin {
+	background-image: url("/assets/images/linkedin.png");
+	background-size: cover;
+}
+
+main {
+	display: flex;
+	flex: 1 1 auto;
+}
+
+#experience, #education {
+	width: 50%;
+	display: inherit;
+	padding: 0 2rem;
+}
+
+#experience {
+	border-right: solid 1px var(--line-color);
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+}
+
+.info_title {
+	text-transform: uppercase;
+	align-self: center;
+	margin-bottom: 1rem;
+}
+
+.info_list {
+	font-size: 1.3rem;
+}
+
+footer {
+	height: 10vh;
+	background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 142, 142, 0.815), rgb(255, 57, 57));
+}
+
+footer .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;	
+}
