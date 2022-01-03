@@ -1,0 +1,211 @@
+:root {
+	--line-color: rgb(219, 219, 219);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.container {
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	max-width: 1300px;
+
+	display: flex;
+	
+	padding: 1rem;
+}
+
+header {
+	height: 45vh;
+}
+
+header .container {
+	border-bottom: solid 1px var(--line-color);
+}
+
+.header_avatar {
+	width: 40%;
+	height: 100%;
+	background-image: url("assets/images/Woody-Harrelson-as-Carnage-in-Venom.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px;
+	margin-right: 3rem;
+}
+
+.header_author {
+	width: 60%;
+	height: 100%;
+
+	display: inherit;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header_author-name, .header_author-lname {
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+
+
+.header_author-quote {
+	margin-bottom: 1rem;
+	font-style: italic;
+	font-size: 20px;
+}
+
+.header_author-social {
+	display: flex;
+}
+
+.header_author-social .item {
+	height: 2rem;
+	
+	width: fit-content;
+	display: flex;
+}
+
+
+
+main {
+	display: flex;
+	flex: 1 1 auto;
+}
+
+#experience, #education {
+	width: 50%;
+	display: inherit;
+	padding: 0 2rem;
+}
+
+#experience {
+	border-right: solid 1px var(--line-color);
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+}
+
+.info_title {
+	text-transform: uppercase;
+	align-self: center;
+	margin-bottom: 1rem;
+}
+
+.info_list {
+	font-size: 1.3rem;
+}
+
+footer {
+	display: inherit;
+	justify-content: center;	
+}
+
+footer .container {
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;	
+	background-color: rgb(226, 226, 226);
+	padding: .5rem;
+}
+
+footer .year {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.footer_author-social {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.footer_author-social .item a {
+	height: 100%;
+	width: 100%;
+}
+
+#github {
+	background-image: url("assets/images/github-sign.png");
+	background-size: cover;
+	width: 2rem;
+	height: 2rem;
+	margin-right: 1rem;
+}
+
+#rss {
+	background-image: url("assets/images/svg/rs_school_js.svg");
+	background-size: cover;
+	width: 5rem;
+	height: 2rem;
+}
+
+@media (max-width: 1300px) {
+	.header_author-name, .header_author-lname {
+		font-size: 2rem;
+	}
+
+	.info_title {
+		font-size: .7rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.header_author-name, .header_author-lname {
+		font-size: 1rem;
+	}
+
+	.info_title {
+		font-size: .7rem;
+	}
+
+	.info_list {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.header_author-name, .header_author-lname {
+		font-size: .7rem;
+		margin-bottom: .5rem;
+	}
+
+	header .container {
+		
+		flex-direction: column;
+		
+	}
+
+	.header_author, .header_avatar {
+		width: 100%;
+		margin: 0;
+	}
+
+	.header_avatar {
+		height: 60%;
+		margin-bottom: .5rem;
+	}
+
+	.header_author {
+		height: 40%;
+		display: flex;
+		align-items: center;
+	}
+
+	.header_author-quote {
+		font-size: 1rem;
+	}
+}
